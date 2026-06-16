@@ -4,7 +4,13 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+
 }
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 /* Typography */
 html {
     /* 62.5% of 16px = 10px, so 1rem = 10px */
@@ -142,6 +148,64 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+}
+
+/* Buttons */
+
+.btn {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.btn--accent {
+    background-color: var(--color-accent);
+    color: #ffffff;
+}
+.btn--primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+.btn--secondary {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+}
+
+.btn--outline {
+    background: #ffffff;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+}
+
+.btn--primary:hover {
+    background:#3a8ffd;
+}
+.btn--secondary:hover {
+    background:#00c8eb;
+}
+.btn--accent:hover {
+    background:#ec3000;
+}
+.btn--outline:hover {
+    background: var(--color-headings);
+    color: #ffffff;
+}
+
+.btn--block {
+    display: inline-block;
+    width: 100%;
+}
+@media screen and (min-width: 1024px) {
+    .btn {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
